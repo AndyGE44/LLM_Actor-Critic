@@ -31,14 +31,15 @@ To ensure enterprise-grade reliability and mitigate common LLM hallucinations (s
     ```
 ## 🖥️ Usage & Testing
 To run the agent and evaluate it against the provided test tasks, simply execute:  
-    ```bash
-    python database_agent.py
-    ```
+```bash
+python database_agent.py
+```
 
-What to expect during execution:
-Task 1 (The Happy Path): The agent will generate a complex 4-table JOIN query, dynamically correct any column ordering or filtering issues during the Review phase, and print the beautifully formatted tabular results directly from the database.
+What to expecggitt during execution:
 
-Task 2 (The Reject Trap): The agent will successfully catch the mass-deletion violation defined in the knowledge_base.jsonl (Rule 64), immediately returning an "action": "reject" response with an empty SQL string, safeguarding the database.
+- **Task 1 (The Happy Path)**: The agent will generate a complex 4-table JOIN query, dynamically correct any column ordering or filtering issues during the Review phase, and print the beautifully formatted tabular results directly from the database.
+
+- **Task 2 (The Reject Trap)**: The agent will successfully catch the mass-deletion violation defined in the knowledge_base.jsonl (Rule 64), immediately returning an "action": "reject" response with an empty SQL string, safeguarding the database.
 
 
 ## 📁 Repository Structure
